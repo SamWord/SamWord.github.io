@@ -57,7 +57,7 @@ body {
   bottom: 0;
 }
 
-#footer ul {
+#footer ul, .plain-list {
     padding: 0;
     list-style: none;
 }
