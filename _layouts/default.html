@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+  </head>
+  <body>
+    <div class="container height-100">
+
+
+      <div id="header">
+        <div class="row header-row">
+          <div class="col-sm-6">
+            <h1>Software Engineer in Training</h1>
+            <p>A blog by Samantha Word for CSCI 362</p>
+          </div>
+          <div class="col-sm-6 navbar-bottom">
+            <ul class="nav nav-pills pull-right">
+              <li><a href="/">Home</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+
+
+      <div id="inner-content">
+        <div class="col-sm-3">
+          {% for post in site.posts %}
+            <div class="text-right">
+              <h3><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+                <p>{{ post.author }} | {{ post.date | date_to_string }}</p>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="col-sm-8 pull-right">
+          {{ content }}
+        </div>
+      </div>
+
+
+      <div id="footer">
+        <div class="col-sm-6 col-sm-offset-3">
+          <hr>
+          <ul class="nav nav-pills nav-justified">
+            <li><a href="https://github.com/SamWord">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>
