@@ -2,6 +2,16 @@
   margin-top: 10%;
 }
 
+.header-row {
+    position: relative;
+}
+
+.navbar-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
 #inner-content {
   height: 50%;
   min-height: 500px;
