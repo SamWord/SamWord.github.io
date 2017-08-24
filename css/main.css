@@ -82,7 +82,7 @@ blockquote {
     padding: 5%;
 }
 
-.question h1, h2, h3 {
+.question h3 {
     display: inline;
     padding-right: 5px;
 }
