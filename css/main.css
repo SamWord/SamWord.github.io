@@ -33,8 +33,23 @@ body {
     color: var(--dark-sand);
 }
 
+blockquote {
+    font-size: 14px;
+    border-left: 3px solid var(--sand);
+}
+
 #header {
   margin-top: 10%;
+}
+
+#post-header .row {
+    display: flex;
+}
+
+#post-header .date-display {
+    align-items: stretch;
+    line-height: 3em;
+    color: var(--dark-purple);
 }
 
 .header-row {
