@@ -6,6 +6,10 @@
     --dark-purple: #49274A;
 }
 
+.italic {
+    font-style: italic;
+}
+
 a {
     color: var(--purple);
 }
