@@ -10,11 +10,11 @@
     font-style: italic;
 }
 
-a {
+a, a:visited {
     color: var(--purple);
 }
 
-a:hover {
+a:hover, a:active {
     text-decoration: none;
     color: var(--dark-purple);
 }
