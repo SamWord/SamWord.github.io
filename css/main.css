@@ -6,6 +6,10 @@
     --dark-purple: #49274A;
 }
 
+.no-margin {
+    margin: 0;
+}
+
 .italic {
     font-style: italic;
 }
@@ -94,6 +98,11 @@ blockquote {
 
 .question span {
     display: inline;
+    color: var(--dark-purple);
+    font-style: italic;
+}
+
+.question-text {
     color: var(--dark-purple);
     font-style: italic;
 }
