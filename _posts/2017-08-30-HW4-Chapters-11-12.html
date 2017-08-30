@@ -1,0 +1,50 @@
+---
+layout: post
+title: "HW4: Chapters 11 & 12"
+date: 2017-08-30
+author: Sam Word
+---
+
+<div class="question">
+<h3>11.4</h3>
+<span>What is the common characteristic of all architectural styles that are geared to supporting software fault tolerance?</span>
+</div>
+<div class="answer">
+  <p>Redundancy and Diversity are the most common characteristics among architectural systems that support fault tolerance. The idea is that if one of the systems in place to prevent system failure fails, then there will be at least one other, slightly different protection in place to keep the system running.</p>
+</div>
+
+<div class="question">
+<h3>11.7</h3>
+<span>It has been suggested that the control software for a radiation therapy machine, used to treat patients with cancer, should be implemented using N-version programming. Comment on whether or not you think this is a good suggestion.</span>
+</div>
+<div class="answer">
+  <p><em>N</em>-version programming will likely be the safest implementation of software to control a radiation therapy machine. Similar to the software systems that control aircraft and nuclear reactors, if the software for a radiation therapy machine were to fail, lives could be lost. Additionally, the radiation therapy machine may not need a high level of availability. Patients with cancer typically schedule radiation therapy appointments in advance, rather than unexpectedly using the machines in an emergency, and the machines are only in use during those sessions. However, during those sessions, it’s critical that the system does not fail. Therefore, I believe that <em>N</em>-version programming is a good way to implement software for a radiation therapy machine so that patients will stay safe and properly receive life-saving treatment.</p>
+</div>
+
+<div class="question">
+<h3>11.9</h3>
+<span>Explain why you should explicitly handle all exceptions in a system that is intended to have a high level of availability.</span>
+</div>
+<div class="answer">
+  <p>As the number of unhandled exceptions increase, the probability that one of those unhandled exceptions will be encountered during runtime increases. Availability is defined as the probability that a system, at a point in time, will be operational and able to deliver the requested services. This means that if the probability of encountering an unchecked exception is high, so is the probability that a system will not be operational at a given time. Therefore, in order to have a highly available system, all exceptions must be explicitly handled.</p>
+</div>
+
+<div class="question">
+<h3>12.5</h3>
+    <span>A train protection system automatically applies the brakes of a train if the speed limit for a segment of track is exceeded, or if the train enters a track segment that is currently signaled with a red light (i.e., the segment should not be entered). There are two critical-safety requirements for this train protection system:</span>
+  <ul class="no-margin">
+    <li class="question-text">The train shall not enter a segment of track that is signaled with a red light.</li>
+    <li class="question-text">The train shall not exceed the specified speed limit for a section of track.</li>
+  </ul>
+    <span>Assuming that the signal status and the speed limit for the track segment are transmitted to on-board software on the train before it enters the track segment, propose five possible. </span>
+</span>
+</div>
+<div class="answer">
+  <ol>
+    <li>If the speed limit of the upcoming segment of track is lower than the current speed of the train and the signal is green, gradually apply the brakes until the new speed limit is reached.</li>
+    <li>If the speed limit of the upcoming segment of track is higher than the current speed of the train and the signal is green, gradually accelerate until the new speed limit is reached.</li>
+    <li>If the upcoming segment of track is signaled with a red light, begin applying the brakes so that the train can safely stop at the signal.</li>
+    <li>If the signal status changes from red to green while slowing down to approach the signal and the train is currently moving faster than the upcoming speed limit, continue gradually slowing down to match the speed limit of the upcoming speed limit.</li>
+    <li>If the signal status changes from red to green while slowing down to approach the signal and the train is currently moving slower than the upcoming speed limit, gradually speed up to match the speed limit of the upcoming speed limit.</li>
+  </ol>
+</div>
