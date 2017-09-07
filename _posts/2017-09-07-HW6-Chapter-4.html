@@ -1,0 +1,110 @@
+---
+layout: post
+title: "HW6: Chapter 4"
+date: 2017-09-7
+author: Sam Word
+---
+
+<div class="question">
+  <h3>4.5</h3>
+  <span>Using the technique suggested here, where natural language descriptions are presented in a standard format, write plausible user requirements for the following functions:</span>
+  <ul class="no-margin">
+    <li><span class="question-text">An unattended petrol (gas) pump system that includes a credit card reader. The customer swipes the card through the reader, then specifies the amount of fuel required. The fuel is delivered and the customer's account debited.</span>
+      <table class="table table-bordered">
+        <tbody>
+          <tr><td class="bold">Function: </td>   <td>Deliver fuel and debit customer’s account at an unattended gas pump.</td></tr>
+          <tr><td class="bold">Description: </td>   <td>Calculate the total cost of the amount of fuel specified by the customer, then dispense the specified amount of fuel and charge the customer’s account for the calculated cost.</td></tr>
+          <tr><td class="bold">Inputs: </td>   <td>Customer bank account information via credit card, amount of fuel required.</td></tr>
+          <tr><td class="bold">Outputs: </td>   <td>Amount of fuel required, bill to customer’s bank account.</td></tr>
+          <tr><td class="bold">Destination: </td>   <td>Customer’s bank account, customer’s car.</td></tr>
+          <tr><td class="bold">Action: </td>   <td>Compute the amount to charge the customer’s bank account by multiplying the amount of fuel required by the price of fuel (ensure the units for fuel and units in price per unit are identical), send bill to customer’s bank account using calculated cost and bank account information, then dispense the amount of fuel required.</td></tr>
+          <tr><td class="bold">Preconditions: </td>   <td>There must be room in the customer’s fuel tank for the required amount of fuel, funds for the amount of fuel required must be present in the customer’s account.</td></tr>
+          <tr><td class="bold">Postconditions: </td>   <td>Amount of fuel delivered was subtracted from the fuel station’s reservoir, customer’s account was charged correctly, the amount of fuel required was delivered.</td></tr>
+          <tr><td class="bold">Side Effects: </td>   <td>None.</td></tr>
+        </tbody>
+      </table>
+    </li>
+    <li><span class="question-text">The cash-dispensing function in a bank ATM.</span>
+      <table class="table table-bordered">
+        <tbody>
+          <tr><td class="bold">Function: </td>   <td>Dispense the correct amount of cash from an ATM.</td></tr>
+          <tr><td class="bold">Description: </td>   <td>Dispense the correct amount of cash inputted by a verified user.</td></tr>
+          <tr><td class="bold">Inputs: </td>   <td>Amount of cash required, bank account information via debit card, PIN number.</td></tr>
+          <tr><td class="bold">Outputs: </td>   <td>Amount of cash required</td></tr>
+          <tr><td class="bold">Destination: </td>   <td>User</td></tr>
+          <tr><td class="bold">Action: </td>   <td>Verify the user’s identity by matching the inputted PIN number to the bank account information from the inputted debit card. If the bank account information and PIN number combination is incorrect, stop the process and do not return any cash. If the bank account information and PIN number combination are verified, allow the user to input the amount of required cash by entering the number of each type of bank notes they want. Do not allow the user to input more cash than the ATM contains. Dispense the inputted amount of cash.</td></tr>
+          <tr><td class="bold">Preconditions: </td>   <td>ATM contains cash, user’s bank account must contain as much or more money than cash required.</td></tr>
+          <tr><td class="bold">Postconditions: </td>   <td>The amount of cash in the ATM decreased by the amount of required cash, the user’s bank account decreased by the amount of required cash, transaction is recorded in user’s bank account log.</td></tr>
+          <tr><td class="bold">Side Effects: </td>   <td>None.</td></tr>
+        </tbody>
+      </table>
+    </li>
+    <li><span class="question-text">In an internet banking system, a facility that allows customers to transfer funds from one account held with the bank to another account with the same bank.</span>
+      <table class="table table-bordered">
+          <tbody>
+            <tr><td class="bold">Function: </td>   <td>Transfers funds from one online account to another within the same bank.</td></tr>
+            <tr><td class="bold">Description: </td>   <td>A online banking service user transfers money from their account to the account of another user who uses the same bank.</td></tr>
+            <tr><td class="bold">Inputs: </td>   <td>Bank account information of the user who is transferring funds to another account via logging into banking service online, account number of other account to transfer funds into, amount of money to be transferred (W).</td></tr>
+            <tr><td class="bold">Outputs: </td>   <td>Confirmation sent to both accounts.</td></tr>
+            <tr><td class="bold">Destination: </td>   <td>Both bank accounts.</td></tr>
+            <tr><td class="bold">Action: </td>   <td>Determine which bank account to withdraw funds from using the bank account information supplied from the logged in user’s credentials (A1), determine where to send the withdrawn funds to using the account number supplied by the logged in user (A2), debit W from A1 and credit W to A2.</td></tr>
+            <tr><td class="bold">Preconditions: </td>   <td>The identity of A1 must be verified (must be logged in to online banking service), the inputted account number must be a valid bank account within the same bank, A1 must contain at least the amount of funds to be transferred.</td></tr>
+            <tr><td class="bold">Postconditions: </td>   <td>A1 had W fewer funds and A2 had W more funds. The sum of both accounts remained the same.</td></tr>
+            <tr><td class="bold">Side Effects: </td>   <td>None.</td></tr>
+        </tbody>
+      </table>
+    </li>
+  </ul>
+</div>
+
+<div class="question">
+  <h3>4.6</h3>
+  <span>Suggest how an engineer responsible for drawing up a system requirements speicification might keep track of the relationships between functional and non-functional requirements.</span>
+</div>
+<div class="answer">
+  <p>An engineer could determine the functional and non-functional requirements of a system before developing a system, then write out the requirements in such a way that closely related functional and non-functional requirements are visually closer together, or draw lines to closely related requirements. Similar to modelling classes in UML, being able to have a visual representation of the relationships between functional and non-functional requirements allows the engineer to have a better grasp of their relationships.</p>
+</div>
+
+<div class="question">
+  <h3>4.7</h3>
+  <span>Using your knowledge of how an ATM is used, develop a set of use cases that could serve as a basis for understanding the requirements for an ATM system.</span>
+</div>
+<div class="answer">
+  <ul>
+    <li> <strong>Use Case: </strong>Deposit cash and checks:
+      <ul>
+        <li>Primary Actor: Owner of a bank account</li>
+        <li>User inputs their bank account and PIN number.</li>
+        <li>If their credentials are correct, allow them to deposit cash and checks together.</li>
+        <li>Credit the user for the amount of cash and amount specified on the checks.</li>
+        <li>If the credentials are incorrect, do not allow money to be deposited.</li>
+      </ul>
+    </li>
+    <li> <strong>Use Case: </strong>Withdraw cash:
+      <ul>
+        <li>Primary Actor: Owner of a bank account</li>
+        <li>User inputs their bank account and PIN number.</li>
+        <li>If their credentials are correct, allow them to enter the amount of cash they wish to withdraw.</li>
+        <li>If their account contains at least the amount of specified cash, withdraw the amount of cash specified from the user’s account. If not, do not output any cash.</li>
+        <li>If the credentials are incorrect, do not allow money to be withdrawn.</li>
+      </ul>
+    </li>
+    <li> <strong>Use Case: </strong>User does nothing:
+      <ul>
+        <li>Primary Actor: Owner of a bank account</li>
+        <li>User inputs their credentials correctly and does not choose an action.</li>
+        <li>User is logged out after 60 seconds of inactivity.</li>
+      </ul>
+    </li>
+    <li> <strong>Use Case: </strong>Load Cash into ATM:
+      <ul>
+        <li>Primary Actor: ATM Maintenance Worker</li>
+        <li>Maintenance worker enters maintenance mode with admin credentials.</li>
+        <li>Maintenance worker selects option to load cash.</li>
+        <li>Maintenance worker loads cash into ATM.</li>
+        <li>ATM counts cash loaded, verifies amount is correct to Maintenance Worker.</li>
+        <li>If cash count is incorrect, return cash, repeat process.</li>
+      </ul>
+    </li>
+  </ul>
+</div>

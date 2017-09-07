@@ -10,8 +10,17 @@
     margin: 0;
 }
 
+.padding-top-bottom {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 .italic {
     font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 a, a:visited {
