@@ -1,0 +1,34 @@
+---
+layout: post
+title: "HW8: Chapter 2"
+date: "2017-09-12"
+author: Sam Word
+---
+
+<div class="question">
+  <h3>2.1</h3>
+  <span>Suggest the most appropriate generic software process model that might be used as a basis for managing the development of the following systems. Explain your answer according to the type of system being developed:</span>
+</div>
+<div class="answer">
+  <ul>
+    <li>
+      <span class="question-text">A system to control antilock breaking in a car</span>
+      <p>In this case, the waterfall model is the most appropriate generic software process podel that might be used as a basis for development. A system that controls antilock breaking in a car is a safety-critical system, and issues related to safety can be expensive to correct during the implementation phase. The waterfall model requires all specifications and design documents to be complete before implementation, meaning they can be analyzed and safety problems are more likely to be avoided during implementation. Additionally, a system controlling antilock breaking in a car is a system that interfaces with hardware. Hardware, unlike sofware, is fairly inflexible, often making decisions on software functionality impossible during the implementation phase.</p>
+    </li>
+
+    <li>
+      <span class="question-text">A virtual reality system to support software maintenance</span>
+      <p>A virtual reality system to support software maintenence would likely be implemented using software integration and implementation. Given that virtual reality is incredibly complex, and packages and frameworks for developing virtual reality software such as <a target="blank" href="https://en.wikipedia.org/wiki/A-Frame_(virtual_reality_framework)">A-Frame</a>, it seems the most appropriate to integrate an existing system into this new system.</p>
+    </li>
+
+    <li>
+      <span class="question-text">A university accounting system that replaces an existing system</span>
+      <p>Without more details, it's hard to determine whether incremental development or the waterfall model would be most appropriate for this system. If this system is only implemented at one university, or the system is being replaced to reflect new accounting needs, then the incremental approach would be best because the system developers could get feedback during development and address the new needs that were not met by the previous system. However, if the new system were to be used by multiple universities or the system requirements for the new system were mostly identical, the waterfall approach might be better. The waterfall method works best when multiple institutions are involved in creating larger systems because it is easier to communicate system requirements.</p>
+    </li>
+
+    <li>
+      <span class="question-text">An interactive travel planning system that helps users plan journeys with the lowest environmental impact</span>
+      <p>Incremental development would be the most appropriate software process model for this system. This system seems like its requirements could change at any point during or after the implementation phase. Users may request certain changes or new features, or specifications may change if a new environmental impact study were to be published. Therefore, the cost of making changes during and after the implementation phase need to be low.</p>
+    </li>
+  </ul>
+</div>
