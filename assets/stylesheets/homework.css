@@ -1,0 +1,19 @@
+.question h3 {
+    display: inline;
+    padding-right: 5px;
+}
+
+.question span {
+    display: inline;
+    color: var(--dark-purple);
+    font-style: italic;
+}
+
+.question-text {
+    color: var(--dark-purple);
+    font-style: italic;
+}
+
+.answer {
+    padding-top: 5px;
+}
