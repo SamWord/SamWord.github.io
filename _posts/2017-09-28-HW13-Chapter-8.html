@@ -1,0 +1,27 @@
+---
+layout: post
+title: "HW13: Chapter 8"
+date: 2017-09-28
+author: Sam Word
+---
+
+<div class="question">
+  <h3>8.7</h3>
+  <span>Write a scenario that could be used to help design tests for the wilderness weather station system.</span>
+</div>
+
+<div class="answer">
+<p>Ashton uses the wilderness weather station system in the remote town of Fort Severn, ON, Canada to gather and report weather information. Every morning around 6am, Ashton requests a weather summary report.</p>
+<p>When the local weather station system is able to connect to the remote data management system via satellite communications, the local weather station system notifies Ashton that her request for a report has successfully been sent. Once the report has been completely transmitted to Ashton’s local weather station system, the report is displayed.</p>
+<p>Ashton knows that it often snows in northern Ontario, making it impossible to establish a stable connection with the satellite communication systems. If satellite communications are unavailable or interrupted due to poor weather conditions, the report is unable to be transmitted to Ashton’s local weather station system, and the system notifies her that it is unable to connect to the remote data management and archiving system. This isn’t a big deal to Ashton. She understands that the conditions in such a remote location can be harsh, and that her local weather station system will continue to establish a connection to the satellite communications systems for 24 hours before giving up. Once it is able to establish a connection and receive the weather summary report, Ashton is notified.</p>
+</div>
+
+<div class="question">
+  <h3>8.10</h3>
+  <span>A common approach to system testing is to test the system until the testing budget is exhausted and then deliver the system to the customers. Discuss the ethics of this approach for systems that are delivered to external customers.</span>
+</div>
+
+<div class="answer">
+<p>Depending on the size of the testing budget, the amount of time dedicated to testing the software, and how the developers approached testing the system, this approach could work out nicely or end disastrously. Since this approach can lead to a wide range of results, it’s not the best approach to systems testing, and is a generally unethical approach. This is especially true in safety-critical systems such as airplane navigation software or human vitals monitoring systems used in hospitals.</p>
+<p>A more ethical approach to system testing is to devote at least half of the estimated schedule to testing, as noted by Fred Brooks in the Mythical Man Month. Budgets can quickly be exhausted if numerous flaws are detected in the system during testing, which is an important aspect of testing a system. If it happens that a particular system’s testing budget is quickly used up but not every use case was accounted for in tests, it’s likely that there are more unknown flaws delivered to external customers than there would be if all use cases were tested.</p>
+</div>
