@@ -37,7 +37,7 @@ a:hover, a:active {
     background: var(--sand) !important;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: Georgia;
     color: var(--dark-purple);
 }
@@ -56,8 +56,12 @@ blockquote {
     border-left: 3px solid var(--sand);
 }
 
-#header {
-  margin-top: 10%;
+header {
+  margin-top: 8%;
+}
+
+#blog-logo {
+    width: 400px;
 }
 
 #post-header .row {
