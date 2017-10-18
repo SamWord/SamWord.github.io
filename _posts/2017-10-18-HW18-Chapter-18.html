@@ -1,0 +1,113 @@
+---
+layout: post
+title: "HW18: Chapter 18"
+date: 2017-10-18
+author: Sam Word
+---
+
+<div class="question">
+<h3>18.4</h3>
+<span>Define an interface specification for the Currency Converter and Check credit rating services services shown in Figure 18.7.</span>
+</div>
+
+<div class="answer">
+  <span>Currency Converter service interface specification:</span>
+  <table class="table table-bordered">
+    <thead>
+      <tr class="text-center">
+        <td><strong>Operation</strong></td>
+        <td><strong>Inputs</strong></td>
+        <td><strong>Outputs</strong></td>
+        <td><strong>Exceptions</strong></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ConvertCurrency</td>
+        <td>
+          <p class="no-margin italic">ccIn</p>
+          <p class="no-margin">initial currency type</p>
+          <p class="no-margin">converted currency type</p>
+          <p class="no-margin">amount to convert</p>
+        </td>
+        <td>
+          <p class="no-margin italic">ccOut</p>
+          <p class="no-margin">converted currency type</p>
+          <p class="no-margin">converted currency amount</p>
+        </td>
+        <td>
+          <p class="no-margin italic">ccFault</p>
+          <p class="no-margin">invalid initial currency type</p>
+          <p class="no-margin">invalid converted currency type</p>
+          <p class="no-margin">invalid amount to convert</p>
+        </td>
+      </tr>
+      <tr>
+        <td>LookUpFee</td>
+        <td>
+          <p class="no-margin italic">lookfeeIn</p>
+          <p class="no-margin">initial currency type</p>
+          <p class="no-margin">converted currency type</p>
+        </td>
+        <td>
+          <p class="no-margin italic">lookfeeOut</p>
+          <p class="no-margin">percent fee on currency exchange</p>
+        </td>
+        <td>
+          <p class="no-margin italic">lookfeeFault</p>
+          <p class="no-margin">invalid initial currency type</p>
+          <p class="no-margin">invalid converted currency type</p>
+        </td>
+      </tr>
+      <tr>
+        <td>LookUpExchange</td>
+        <td>
+          <p class="no-margin italic">lookexIn</p>
+          <p class="no-margin">initial currency type</p>
+          <p class="no-margin">converted currency type</p>
+        </td>
+        <td>
+          <p class="no-margin italic">lookexOut</p>
+          <p class="no-margin">exchange rate between currencies</p>
+        </td>
+        <td>
+          <p class="no-margin italic">lookexFault</p>
+          <p class="no-margin">invalid initial currency type</p>
+          <p class="no-margin">invalid converted currency type</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <span>Credit check rating service interface specification:</span>
+  <table class="table table-bordered">
+    <thead>
+      <tr class="text-center">
+        <td><strong>Operation</strong></td>
+        <td><strong>Inputs</strong></td>
+        <td><strong>Outputs</strong></td>
+        <td><strong>Exceptions</strong></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>GetCreditRating</td>
+        <td>
+          <p class="no-margin italic">gcrIn</p>
+          <p class="no-margin">social security number</p>
+          <p class="no-margin">name</p>
+          <p class="no-margin">date of birth</p>
+        </td>
+        <td>
+          <p class="no-margin italic">gcrOut</p>
+          <p class="no-margin">credit rating</p>
+        </td>
+        <td>
+          <p class="no-margin italic">gcrFault</p>
+          <p class="no-margin">invalid ssn, name, date of birth</p>
+          <p class="no-margin">no credit rating found</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
